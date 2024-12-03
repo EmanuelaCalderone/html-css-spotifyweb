@@ -7,39 +7,183 @@
 body{
     font-family: 'Montserrat', sans-serif;
 }
-
+/*container superiore*/
 #container{
     display:flex;
     width:100%;
-    height:calc(100vh - 100px);
+    height:calc(100vh - 80px);
     /*debug
     background-color:rgb(3, 41, 72);*/
 }
 
+/*contenuto principale*/
 #main_content{
     overflow:auto;
-    height:100%;
-    width:calc(100% - 200px);
     background-color:#141922;
+    height:100%;
+    width:calc(100% - 165px);
 }
 
+/*barra superiore*/
 #upgrade{
     position:fixed;
     top: 0;
-    right: 0;
     height:60px;
-    width:calc(100% - 200px);
-    /*debug*/
+    width:calc(100% - 165px);
     background-color:#080b126b;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
 }
 
-#nav_menu{
-    height:100%;
-    width:200px;
+/*bottone upgrade*/
+#upgrade button{
+    position:absolute;
+    right:20px;
     background-color:black;
+    color:white;
+    border:1px solid white;
+    border-radius:50px;
+    padding:8px;
+    width:12%;
+    font-size:10px;
 }
 
+/*blocco laterale*/
+#nav_menu{
+    color:darkgrey;
+    position:relative;
+    background-color:black;
+    height:100%;
+    width:165px;
+    padding-top:10px;
+    padding-left:15px;
+    font-size:12px;
+}
+
+/*blocco logo spotify*/
+#logo {
+width:60%;
+}
+
+/*immagine logo*/
+#logo img{
+    max-width:100%;
+}
+
+/*menu con le tre icone*/
+#menu_icon{
+  width:100%;
+  margin-top:20px;
+}
+
+#menu_icon li{
+    display:flex;
+    align-items:center;
+}
+
+/*icone del menu*/
+#menu_icon img{
+    width:18%;
+    max-width:100%;
+    margin-right:10px;
+}
+
+#menu_icon li, #icon_name li, #playlist li{
+    list-style-type:none;
+}
+
+#menu_icon ul li span{
+    width:100%;
+}
+
+/*sezione playlist*/
+#playlist{
+    font-size:10px;
+    margin-top:8px;
+    line-height:27px;
+}
+
+#playlist ul {
+    margin-top:15px;
+}
+
+#playlist h4{
+    color:white;
+}
+
+/*bottone + crea playlist*/
+#add_button{
+    padding:3px 6px;
+    margin-right:10px;
+    background-color:darkgrey;
+    font-size:25px;   
+    border:none;
+}
+
+/*sezione inferiore del blocco laterale*/
+#navbar_bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-left:15px;
+    font-size:12px;
+}
+
+/*freccia down*/
+.fa-arrow-down{
+    border:1px solid darkgrey;
+    border-radius:50%;
+    padding:2px;
+    font-size:8px;
+    margin-right:8px;
+}
+
+/*parte "Installa app*/
+#install{
+    position:relative;
+    margin-bottom:10px;
+}
+
+/*sezione profilo personale*/
+#profile{
+    display:flex;
+    width:80%;
+    padding:8px 0;
+    height:40px;
+    /*debug
+    background-color:purple;*/
+}
+
+/*icona del profilo personale*/
+#profile img{
+    max-width:100%;
+    background-color:darkgrey;
+    border-radius:50px;
+    width:20px;
+    margin-right:8px;
+}
+
+/*nome proprietario profilo*/
+#profile span{
+    vertical-align:middle;
+    line-height:20px;
+}
+
+/*linea sotto "Installa app"*/
+#install::after{
+    position:absolute;
+    top:25px;
+    left:0;
+    content:"";
+    width:90%;
+    height:1px;
+    background-color:darkgrey;
+}
+
+/*sezione player*/
 #player{
-    height:100px;
+    height:80px;
     background-color:#282828;
 }
