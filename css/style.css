@@ -17,7 +17,7 @@ body{
 }
 
 #main_content{
-    display:flex;
+    overflow:auto;
     height:100%;
     width:calc(100% - 200px);
     background-color:#141922;
@@ -30,7 +30,7 @@ body{
     height:60px;
     width:calc(100% - 200px);
     /*debug*/
-    background-color:rgb(230, 10, 10);
+    background-color:#080b126b;
 }
 
 #nav_menu{
