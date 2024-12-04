@@ -81,6 +81,7 @@ width:60%;
 #menu_icon li{
     display:flex;
     align-items:center;
+    position:relative;
 }
 
 /*icone del menu*/
@@ -96,6 +97,18 @@ width:60%;
 
 #menu_icon ul li span{
     width:100%;
+}
+
+/*linea verde accanto a icona home*/
+#green_v::before{
+    position:absolute;
+    content:"";
+    background-color: #88C62A;
+    top:0;
+    left:-10px;
+    width:2px;
+    height:100%;
+    border-radius:20px;
 }
 
 /*sezione playlist*/
@@ -199,25 +212,41 @@ width:60%;
     font-size:12px;
 }
 
+#navbar_main_content li{
+    position:relative;
+}
+
+/*linea verde sotto "in evidenza"*/
+#green_h::after{
+    position:absolute;
+    content:"";
+    background-color: #88C62A;
+    top:18px;
+    right:25px;
+    width:40%;
+    height:3px;
+    border-radius:20px;
+}
+
 /*titoli sezioni principali*/
 h3{
     margin-top:20px;
     color:white;
-
 }
 
-/*blocco anteprime brani/playlist*/
+/*blocco categoria*/
 .recently_played, .created_for, .most_popular{
     display:flex;
     margin-top:20px;
     gap:12px;
 }
 
-/*immagini brani/playlist*/
-.tracks{
+/*blocco immagine album e sottotitolo*/
+.track{
     width:16%;
 }
 
+/*immagine traccia*/
 .album_img img{
     max-width:100%;
 }
@@ -243,15 +272,12 @@ h5{
     font-size:11px;
 }
 
-/*sezione playlist*/
-.created_for{
-    margin-top:20px;
-}
-
+/*album con bordo circolare*/
 .titles_circle img{
     border-radius:50%;
 }
 
+/*categoria "most popular"*/
 .most_popular{
     padding-bottom:20px;
 }
