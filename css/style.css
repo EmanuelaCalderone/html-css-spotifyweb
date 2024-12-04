@@ -46,9 +46,11 @@ body{
     border:1px solid white;
     border-radius:50px;
     padding:8px;
-    width:12%;
+    width:20%;
     font-size:10px;
+    max-width:100%;
 }
+
 
 /*blocco laterale*/
 #nav_menu{
@@ -70,6 +72,10 @@ padding-left:15px;
 /*immagine logo*/
 #logo img{
     max-width:100%;
+}
+
+#logo-small{
+    display:none;
 }
 
 /*menu con le tre icone*/
@@ -100,8 +106,14 @@ padding-left:15px;
 }
 
 /*linea verde verticale accanto a icona home*/
-#green_v{
+#green_v:active{
     border-left:#88C62A 2px solid;
+}
+
+/*tutti i link*/
+a{
+    color:white;
+    text-decoration:none;
 }
 
 /*sezione playlist*/
@@ -152,6 +164,7 @@ padding-left:15px;
 #install{
     position:relative;
     margin-bottom:10px;
+    text-align:center;
 }
 
 /*sezione profilo personale*/
@@ -177,7 +190,14 @@ padding-left:15px;
 #profile span{
     vertical-align:middle;
     line-height:20px;
+    color:white;
+    font-weight:bold;
 }
+
+#install span{
+    font-weight:bold;
+    color:grey;
+} 
 
 /*linea sotto "Installa app"*/
 #install::after{
@@ -204,6 +224,7 @@ padding-left:15px;
     font-weight:bold;
     gap:17px;
     font-size:12px;
+    max-width:100%;
 }
 
 #navbar_main_content li{
@@ -276,19 +297,6 @@ h5{
     padding-bottom:20px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*sezione player*/
 #player{
     display:flex;
@@ -329,10 +337,18 @@ h5{
    font-weight:bold;
 }
 
+#track_name{
+    color:grey;
+}
+
 /*icone sx*/
 #player_sx_icons{
-    margin-left:50px;
+    margin-left:20px;
     color:grey;
+}
+
+.fa-heart{
+    margin-right:5px;
 }
 
 /*player centrale*/
@@ -414,4 +430,74 @@ h5{
 /*barra volume interna - indicazioni barra di destra*/
 #player_bar_inside_dx{
     width:25%;
+}
+
+@media screen and (max-width:768px){
+   #navbar_main_content ul, .recently_played, .created_for, .most_popular{
+    flex-wrap:wrap;
+   }
+
+   #track_description p{
+    font-size:9px;
+   }
+
+   #player_sx{
+    font-size:13px;
+   }
+
+   #sinister_img{
+    width: 17%;
+   }
+
+   #player_bar_mid{
+        width: 90%;
+   }
+
+   #player_bar_dx{
+        width:40%;
+   }
+
+}
+
+@media screen and (max-width:480px){
+    .track{
+        width:50%;
+    }
+}
+
+@media screen and (max-width:380px){
+    .track{
+        width:50%;
+    }
+
+    #logo, #menu_icon ul a, #playlist, #profile span, #install span, #install::after{
+        display:none;
+    }
+
+    #logo-small{
+        display:inline-block;
+        width:100%;
+    }
+
+    #nav_menu{
+        width:15%;
+        margin:0;
+        padding:0;
+    }
+
+    #main_content{
+        width:85%;
+    }
+
+    #upgrade{
+        width:85%;
+    }
+
+    #menu_icon img{
+        width:80%;
+    }
+
+   footer >*{
+    width:15%;
+   }
 }
