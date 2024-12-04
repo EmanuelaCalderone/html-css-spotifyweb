@@ -34,6 +34,7 @@ body{
     display:flex;
     justify-content:flex-end;
     align-items:center;
+    z-index:1000;
 }
 
 /*bottone upgrade*/
@@ -198,55 +199,62 @@ width:60%;
     font-size:12px;
 }
 
+/*titoli sezioni principali*/
 h3{
     margin-top:20px;
     color:white;
 
 }
-.tracks{
+
+/*blocco anteprime brani/playlist*/
+.recently_played, .created_for, .most_popular{
     display:flex;
-    justify-content:space-between;
     margin-top:20px;
-    width:16%;
     gap:12px;
-    
 }
 
-.tracks img{
-    padding:0 10px;
-    max-width:100%;
-}
-
-.titles{
-    display:flex;
-    justify-content:space-between;
-    font-size:12px;
-    max-width:100%;
-}
-
-.subtitles{
-    text-align:center;
+/*immagini brani/playlist*/
+.tracks{
     width:16%;
+}
+
+.album_img img{
+    max-width:100%;
+}
+
+/*blocco sottotitoli album*/
+.subtitles{
     max-width:100%;
     margin-top:10px;
     padding:0 10px;
+    text-align:center;
 }
 
+/*titolo album*/
 h4{
     color:white;
     font-size:13px;
 }
 
+/*sottotitolo album*/
 h5{
     color:grey;
     margin-top:10px;
+    font-size:11px;
 }
 
+/*sezione playlist*/
+.created_for{
+    margin-top:20px;
+}
 
+.titles_circle img{
+    border-radius:50%;
+}
 
-
-
-
+.most_popular{
+    padding-bottom:20px;
+}
 
 
 
