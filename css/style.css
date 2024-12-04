@@ -58,13 +58,13 @@ body{
     height:100%;
     width:165px;
     padding-top:10px;
-    padding-left:15px;
     font-size:12px;
 }
 
 /*blocco logo spotify*/
 #logo {
 width:60%;
+padding-left:15px;
 }
 
 /*immagine logo*/
@@ -81,7 +81,7 @@ width:60%;
 #menu_icon li{
     display:flex;
     align-items:center;
-    position:relative;
+    padding-left:15px;
 }
 
 /*icone del menu*/
@@ -99,16 +99,9 @@ width:60%;
     width:100%;
 }
 
-/*linea verde accanto a icona home*/
-#green_v::before{
-    position:absolute;
-    content:"";
-    background-color: #88C62A;
-    top:0;
-    left:-10px;
-    width:2px;
-    height:100%;
-    border-radius:20px;
+/*linea verde verticale accanto a icona home*/
+#green_v{
+    border-left:#88C62A 2px solid;
 }
 
 /*sezione playlist*/
@@ -116,6 +109,7 @@ width:60%;
     font-size:10px;
     margin-top:8px;
     line-height:27px;
+    padding-left:15px;
 }
 
 #playlist ul {
