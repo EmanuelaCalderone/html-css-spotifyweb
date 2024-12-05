@@ -47,6 +47,9 @@ body{
     font-size:10px;
 }
 
+#upgrade button:hover{
+    padding:14px 34px;
+}
 
 /*blocco laterale*/
 #nav_menu{
@@ -72,6 +75,7 @@ padding-left:15px;
     max-width:100%;
 }
 
+/*immagine piccola logo*/
 #logo-small{
     display:none;
 }
@@ -80,7 +84,6 @@ padding-left:15px;
 #menu_icon{
   width:100%;
   margin:10px 0;
-  
 }
 
 #menu_icon li{
@@ -96,7 +99,7 @@ padding-left:15px;
 
 /*icone del menu*/
 #menu_icon img{
-    width:15%;
+    width:20%;
     max-width:100%;
     margin-right:10px;
 }
@@ -105,9 +108,10 @@ padding-left:15px;
     list-style-type:none;
 }
 
-#menu_icon ul li span{
+#menu_icon ul li{
     width:100%;
 }
+
 
 /*linea verde verticale accanto a icona home*/
 .green_v:active{
@@ -116,8 +120,12 @@ padding-left:15px;
 
 /*tutti i link*/
 a{
-    color:white;
+    color:grey;
     text-decoration:none;
+}
+
+a:hover{
+    color:white;
 }
 
 /*sezione playlist*/
@@ -131,7 +139,8 @@ a{
     margin-top:15px;
 }
 
-#playlist h4{
+/*titolo playlist*/
+#playlist h4 a{
     color:white;
 }
 
@@ -217,10 +226,17 @@ a{
     margin:0 20px;
 }
 
+#navbar_main_content a{
+    color:grey;
+}
+
+#navbar_main_content a:hover{
+    color:white;
+}
+
 #navbar_main_content ul{
     display:flex;
     justify-content:center;
-    color:grey;
     font-weight:bold;
     gap:17px;
     font-size:12px;
@@ -339,6 +355,11 @@ h5{
     color:grey;
 }
 
+#track_name:hover{
+    color:white;
+    text-decoration:underline;
+}
+
 #player{
     display:flex;
     z-index:2000;
@@ -354,6 +375,10 @@ h5{
     margin-right:5px;
 }
 
+.fa-regular:hover{
+    color:white;
+}
+
 /*player centrale*/
 #player_middle{
     width:40%;
@@ -364,14 +389,12 @@ h5{
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:18px;
+    font-size:25px;
     gap:25px;
 }
 
-.fa-play{
-    border:2px white solid;
-    border-radius:50%;
-    padding:0 4px;
+.fa-regular:hover{
+    font-size:30px;
 }
 
 /*blocco barra e durata*/
@@ -437,7 +460,6 @@ h5{
 }
 
 @media screen and (max-width:768px){
-
     /*div con gli album*/
     .recently_played, .created_for, .most_popular {
     display: flex;
