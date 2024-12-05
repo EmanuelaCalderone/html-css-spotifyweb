@@ -280,7 +280,30 @@ h3{
 /*immagine traccia*/
 .album_img img{
     max-width:100%;
+    position:relative;
 }
+
+.album_img img:hover{
+    opacity:0.5;
+}
+
+/*tasto play che spunta col mouse*/
+.fa-regular.fa-circle-play.play_hover{
+    position:absolute;
+    color:white;
+    left:60px;
+    top:130px;
+    font-size:50px;
+    opacity:0;
+}
+
+/*hover del tasto play*/
+.fa-regular.fa-circle-play.play_hover:hover{
+    opacity:1;
+    z-index:1000;
+}
+
+
 
 /*blocco sottotitoli album*/
 .subtitles{
@@ -393,7 +416,7 @@ h5{
     gap:25px;
 }
 
-.fa-regular:hover{
+.circle_big:hover{
     font-size:30px;
 }
 
@@ -410,11 +433,20 @@ h5{
     align-self:flex-end;
 }
 
-/*barra durata - indicazioni generiche*/
+/*barra durata e volume - indicazioni generiche*/
 .player_bar{
     background-color:grey;
     height:4px;
     border-radius:20px;
+    display:flex;
+    align-items:center;
+}
+
+/*pallino bianco durata brano e volume*/
+.fa-solid.fa-circle{
+    color:white;
+    /*debug*/
+    display:block;
 }
 
 /*barra durata centrale - indicazioni barra centrale*/
@@ -433,6 +465,11 @@ h5{
 /*barra durata interna - indicazioni barra centrale*/
 #player_bar_inside_mid{
     width:20%;
+}
+
+/*hover della barra della durata e del volume*/
+.player_bar_inside:hover{
+    background-color:#88C62A;
 }
 
 /*div di destra del player*/
