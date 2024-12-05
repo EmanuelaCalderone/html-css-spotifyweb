@@ -223,7 +223,7 @@ a:hover{
 #music{
     position:relative;
     top:70px;
-    margin:0 20px;
+    margin:0 5px;;
 }
 
 #navbar_main_content a{
@@ -268,13 +268,14 @@ h3{
 /*blocco categoria*/
 .recently_played, .created_for, .most_popular{
     display:flex;
+    justify-items:space-evenly;
     margin-top:20px;
-    gap:12px;
 }
 
 /*blocco immagine album e sottotitolo*/
 .track{
     width:calc(100%/6);
+    margin-right:5px;
 }
 
 /*immagine traccia*/
