@@ -278,10 +278,14 @@ h3{
     margin-right:5px;
 }
 
+
+.album_img{
+    position:relative;
+}
+
 /*immagine traccia*/
 .album_img img{
     max-width:100%;
-    position:relative;
 }
 
 .album_img img:hover{
@@ -292,8 +296,9 @@ h3{
 .fa-regular.fa-circle-play.play_hover{
     position:absolute;
     color:white;
-    left:60px;
-    top:130px;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
     font-size:50px;
     opacity:0;
 }
