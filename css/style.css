@@ -27,7 +27,6 @@ body{
 /*barra superiore*/
 #upgrade{
     position:fixed;
-    top: 0;
     height:60px;
     width:calc(100% - 165px);
     background-color:#080b126b;
@@ -39,33 +38,32 @@ body{
 
 /*bottone upgrade*/
 #upgrade button{
-    position:absolute;
-    right:20px;
     background-color:black;
     color:white;
     border:1px solid white;
     border-radius:50px;
-    padding:8px;
-    width:20%;
+    padding:10px 30px;
+    margin-right:15px;
     font-size:10px;
-    max-width:100%;
 }
 
 
 /*blocco laterale*/
 #nav_menu{
-    color:darkgrey;
-    position:relative;
+    color:grey;
     background-color:black;
+    overflow:hidden;
     height:100%;
     width:165px;
     padding-top:10px;
     font-size:12px;
+    display:flex;
+    flex-direction:column;
 }
 
 /*blocco logo spotify*/
 #logo {
-width:60%;
+width:80%;
 padding-left:15px;
 }
 
@@ -81,7 +79,8 @@ padding-left:15px;
 /*menu con le tre icone*/
 #menu_icon{
   width:100%;
-  margin-top:20px;
+  margin:10px 0;
+  
 }
 
 #menu_icon li{
@@ -90,9 +89,14 @@ padding-left:15px;
     padding-left:15px;
 }
 
+#menu_icon a{
+    color:grey;
+    font-size:10px;
+}
+
 /*icone del menu*/
 #menu_icon img{
-    width:18%;
+    width:15%;
     max-width:100%;
     margin-right:10px;
 }
@@ -106,7 +110,7 @@ padding-left:15px;
 }
 
 /*linea verde verticale accanto a icona home*/
-#green_v:active{
+.green_v:active{
     border-left:#88C62A 2px solid;
 }
 
@@ -119,7 +123,6 @@ a{
 /*sezione playlist*/
 #playlist{
     font-size:10px;
-    margin-top:8px;
     line-height:27px;
     padding-left:15px;
 }
@@ -143,12 +146,10 @@ a{
 
 /*sezione inferiore del blocco laterale*/
 #navbar_bottom{
-    position: absolute;
-    bottom: 0;
-    left: 0;
     width: 100%;
     padding-left:15px;
     font-size:12px;
+    margin-top: auto;
 }
 
 /*freccia down*/
@@ -160,11 +161,11 @@ a{
     margin-right:8px;
 }
 
-/*parte "Installa app*/
+/*parte "Installa app"*/
 #install{
     position:relative;
     margin-bottom:10px;
-    text-align:center;
+    
 }
 
 /*sezione profilo personale*/
@@ -188,7 +189,6 @@ a{
 
 /*nome proprietario profilo*/
 #profile span{
-    vertical-align:middle;
     line-height:20px;
     color:white;
     font-weight:bold;
@@ -258,7 +258,7 @@ h3{
 
 /*blocco immagine album e sottotitolo*/
 .track{
-    width:16%;
+    width:calc(100%/6);
 }
 
 /*immagine traccia*/
@@ -319,26 +319,29 @@ h5{
 #sinister_img{
     width:10%;
     margin-right:7px;
+    min-width: 50px; 
+    max-width: 100px;
 }
 
 /*immagine brano player*/
-#player_sx img{
+#sinister_img img{
     max-width:100%;
 }
 
 /*descrizione brano*/
 #track_description{
-    font-size:10px;
+    font-weight:bold;
+    font-size:8px;
     margin-left:2px;
-}
-
-/*primo elemento descrizione brano*/
-#track_description p:first-of-type{
-   font-weight:bold;
 }
 
 #track_name{
     color:grey;
+}
+
+#player{
+    display:flex;
+    z-index:2000;
 }
 
 /*icone sx*/
@@ -360,14 +363,15 @@ h5{
 #player_mid_icons{
     display:flex;
     justify-content:center;
+    align-items:center;
+    font-size:18px;
     gap:25px;
 }
 
-/*icona play*/
 .fa-play{
-    border:2px solid white;
+    border:2px white solid;
     border-radius:50%;
-    padding:1px 5px;
+    padding:0 4px;
 }
 
 /*blocco barra e durata*/
@@ -433,71 +437,87 @@ h5{
 }
 
 @media screen and (max-width:768px){
-   #navbar_main_content ul, .recently_played, .created_for, .most_popular{
-    flex-wrap:wrap;
+
+    /*div con gli album*/
+    .recently_played, .created_for, .most_popular {
+    display: flex;
+    flex-wrap: wrap;    
    }
 
-   #track_description p{
-    font-size:9px;
-   }
+   /*elementi singoli */
+   .track{
+    width:20%;
+}
 
-   #player_sx{
-    font-size:13px;
-   }
+    /*navbar superiore*/
+    #navbar_main_content ul{
+        display: flex;
+        flex-wrap: wrap; 
+    }
 
-   #sinister_img{
-    width: 17%;
-   }
+    /*barra durata player inferiore centrale*/
+    #player_bar_mid{
+        width:80%;
+    }
 
-   #player_bar_mid{
-        width: 90%;
-   }
+    /*icone di destra nel player*/
+    #player_dx_icons{
+        justify-content:center;
+        padding-left:30px;
+    }
 
-   #player_bar_dx{
-        width:40%;
-   }
+    /*barra volume player*/
+    #player_bar_dx{
+        width:60%;
+    }
+}
 
+@media screen and (max-width:580px){
+   
+    /*singoli elementi (immagini principali) */
+    .track{
+        width:calc(100% / 3);
+    }
+  
+    /*icone cuore e cartella a sx del player*/
+    #player_sx_icons{
+        width:20%;
+    }
 }
 
 @media screen and (max-width:480px){
-    .track{
-        width:50%;
-    }
-}
-
-@media screen and (max-width:380px){
-    .track{
-        width:50%;
-    }
-
+  
+    /*elementi del blocco laterale che scompaiono*/
     #logo, #menu_icon ul a, #playlist, #profile span, #install span, #install::after{
         display:none;
     }
 
+    /*logo Spotify piccolo*/
     #logo-small{
         display:inline-block;
         width:100%;
     }
 
+    /*blocco laterale*/
     #nav_menu{
         width:15%;
         margin:0;
         padding:0;
     }
 
+    /*contenitore principale del blocco grande superiore*/
     #main_content{
         width:85%;
     }
 
-    #upgrade{
+    /*icone del blocco laterale*/
+    #menu_icon img{
+        width:60%;
+    }
+
+    /*ridimensionamento blocco superiore upgrade*/
+    #upgrade {
         width:85%;
     }
-
-    #menu_icon img{
-        width:80%;
-    }
-
-   footer >*{
-    width:15%;
-   }
+  
 }

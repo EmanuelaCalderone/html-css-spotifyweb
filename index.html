@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <title>Spotify Web App</title>
 </head>
+
 <body>
 
 <!--blocco superiore-->
@@ -26,27 +27,29 @@
         </div>
 
         <!--menu con icone-->
-        <nav id="menu_icon">
-            <ul>
-                <li>
-                    <div id="logo-small">
-                        <img src="./img/logo-small.svg" alt="logo spotify piccolo">
-                    </div>
-                </li>
-                <li id="green_v">
-                        <img src="./img/home.svg" alt="icona casa">
-                    <a href="#">Home</a>
-                </li>
-                <li id="green_v">
-                    <img src="./img/search.svg" alt="lente d'ingrandimento">
-                    <a href="#">Cerca</a>
-                </li>
-                <li id="green_v">
-                    <img src="./img/libreria.svg" alt="icona libri">
-                    <a href="#">La tua libreria</a>
-                </li>
-            </ul>
-        </nav>    
+
+            <nav id="menu_icon">
+                <ul>
+                    <li>
+                        <div id="logo-small">
+                            <img src="./img/logo-small.svg" alt="logo spotify piccolo">
+                        </div>
+                    </li>
+                    <li class="green_v">
+                            <img src="./img/home.svg" alt="icona casa">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="green_v">
+                        <img src="./img/search.svg" alt="lente d'ingrandimento">
+                        <a href="#">Cerca</a>
+                    </li>
+                    <li class="green_v">
+                        <img src="./img/libreria.svg" alt="icona libri">
+                        <a href="#">La tua libreria</a>
+                    </li>
+                </ul>
+            </nav> 
+           
 
         <!--sezione playlist-->
         <section id="playlist">
@@ -65,7 +68,7 @@
                 <li>Nome Playlist</li>
             </ul>
         </section>
-
+       
         <!--parte inferiore del blocco laterale-->
         <section id="navbar_bottom">
             <!--installa-->
@@ -293,8 +296,8 @@
 
         <!--icone player centrale-->
         <div id="player_mid_icons">
-            <i class="fa-solid fa-backward-step"></i>
             <i class="fa-solid fa-shuffle"></i>
+            <i class="fa-solid fa-backward-step"></i>
             <i class="fa-solid fa-play"></i>
             <i class="fa-solid fa-forward-step"></i>
             <i class="fa-solid fa-arrow-rotate-right"></i>
